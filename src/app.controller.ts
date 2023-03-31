@@ -10,10 +10,4 @@ export class AppController {
   getLogin(): string {
     return 'hello';
   }
-
-  @Get('auth/google/callback')
-  @UseGuards(AuthGuard('google'))
-  googleLoginCallback(@Req() req) {
-    return req.user;
-  }
 }
