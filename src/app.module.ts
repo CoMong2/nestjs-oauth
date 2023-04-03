@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PassportModule } from '@nestjs/passport';
-import { GoogleStrategy } from './auth/google.strategy';
+// import { GoogleStrategy } from './auth/google/google.strategy';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -13,7 +13,7 @@ import { AuthModule } from './auth/auth.module';
   controllers: [AppController],
   providers: [
     AppService,
-    GoogleStrategy,
+    // GoogleStrategy,
   ],
 })
 export class AppModule {}
