@@ -5,9 +5,9 @@ import { AuthGuard } from '@nestjs/passport';
 @Controller('/auth')
 export class AuthController {
   @Get('/logout')
-  @UseGuards(AuthGuard('google'))
-  async Logout(@Res() reply: FastifyReply): Promise<any> {
-    return reply.status(HttpStatus.OK)
-      .redirect(process.env.REACT_APP_FRONT_PATH + '/logout');
+  async Logout(@Req() req, @Res() reply: FastifyReply): Promise<any> {
+    console.log(reply);
+    return reply.status(HttpStatus.FOUND)
+      .redirect('http://localhost:3000');
   }   
 }
