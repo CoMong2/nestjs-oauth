@@ -1,0 +1,7 @@
+common:
+  port: 3000
+  backend: 'https://localhost:3001'
+  frontend: 'https://localohost:3000'
+
+cookie:
+  secret: 'sMwCyElsXy0a7RDn9joykzRZptS76LtA'

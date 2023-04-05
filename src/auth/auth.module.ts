@@ -4,14 +4,8 @@ import { GoogleStrategy } from './google/google.strategy';
 import { GoogleModule } from './google/google.module';
 
 @Module({
-    imports: [
-      GoogleModule
-    ],
-    controllers: [AuthController,
-    ],
-    providers: [
-      GoogleStrategy,
-    ],
-  })
-  export class AuthModule {}
-  
+  imports: [GoogleModule],
+  controllers: [AuthController],
+  providers: [GoogleStrategy],
+})
+export class AuthModule {}
