@@ -28,6 +28,6 @@ export class GoogleController {
 
     return reply
       .status(HttpStatus.OK)
-      .redirect('http://localhost:3000/login/callback');
+      .redirect('http://localhost:3000/class/MainPage');
   }
 }

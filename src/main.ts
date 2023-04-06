@@ -1,9 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
-import fastifyCookie from '@fastify/cookie';
+import { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -11,6 +7,8 @@ async function bootstrap() {
     AppModule,
     //new FastifyAdapter(),
   );
+
+  app.enableCors();
 
   await app.listen(3001, '0.0.0.0');
 }
